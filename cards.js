@@ -43,3 +43,13 @@ function noBorders() {
     peopleElements[i].classList.remove("border-class")
   }
 }
+
+
+function changeBio(e) {
+  bioElement.innerHTML = inputField.value
+  if (e.code === "Enter") {
+    bioElement.innerHTML = inputField.value
+    inputField.value = ""
+    noBorders()
+  }
+}
