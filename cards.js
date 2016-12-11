@@ -58,3 +58,31 @@ function changeBio(e) {
 function inputToBio() {
   inputField.addEventListener("keyup", changeBio)
 }
+
+
+for (var i = 0; i < people.length; i++) {
+  let backgroundColor;
+  let peopleDiv = document.createElement("div")
+
+  if (i % 2 === 0) {
+    backgroundColor = "even-class"
+  } else {
+    backgroundColor = "odd-class"
+  }
+
+  peopleDiv.classList.add(backgroundColor,"people-div", "people-" + i)
+  peopleDiv.innerHTML = `
+                          <header>
+                            <h2 class="target-el-class">${people[i].name}</h2>
+                            <h4 class="target-el-class">${people[i].title}</h4>
+                          </header>
+                          <section>
+                            <p class="target-el-class bio-el">${people[i].bio}</p>
+                            <img class="target-el-class"  src=${people[i].image}>
+                          </section>
+                          <footer>
+                            <p class="target-el-class">Lifespan: ${people[i].lifespan.birth}-${people[i].lifespan.death}</p>
+                          </footer>
+                        `
+containerDiv.appendChild(peopleDiv)
+}
