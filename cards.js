@@ -53,3 +53,8 @@ function changeBio(e) {
     noBorders()
   }
 }
+
+
+function inputToBio() {
+  inputField.addEventListener("keyup", changeBio)
+}
