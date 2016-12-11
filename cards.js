@@ -86,3 +86,18 @@ for (var i = 0; i < people.length; i++) {
                         `
 containerDiv.appendChild(peopleDiv)
 }
+
+
+containerDiv.addEventListener("click", (e) => {
+  noBorders()
+
+  if (e.target.classList.contains("target-el-class")) {
+    e.target.classList.add("border-class")
+    inputField.value = ""
+    inputField.focus()
+    let parentEl = e.target.parentNode.parentNode
+    bioElement = parentEl.querySelector(".bio-el")
+    inputToBio()
+  }
+
+});
