@@ -31,3 +31,7 @@ let people = [
                },
 
              ]
+
+let containerDiv = document.querySelector("#container")
+let inputField = document.querySelector("#input-field")
+let bioElement;
