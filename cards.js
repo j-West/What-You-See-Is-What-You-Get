@@ -35,3 +35,11 @@ let people = [
 let containerDiv = document.querySelector("#container")
 let inputField = document.querySelector("#input-field")
 let bioElement;
+
+function noBorders() {
+  let peopleElements = container.querySelectorAll(".target-el-class")
+
+  for (var i = 0; i < peopleElements.length; i++) {
+    peopleElements[i].classList.remove("border-class")
+  }
+}
